@@ -5,17 +5,100 @@ import Sobrenos from "../screens/Sobrenos";
 import Forum from "../screens/Forum";
 import Colaboradores from "../screens/Colaboradores";
 import Cadastro from "../screens/Cadastro";
+import { Feather } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
 const TabRoutes = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Sobrenos" component={Sobrenos} />
-      <Tab.Screen name="Forum" component={Forum} />
-      <Tab.Screen name="Colaboradores" component={Colaboradores} />
-      <Tab.Screen name="Cadastro" component={Cadastro} />
+    <Tab.Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName="Home"
+    >
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name="home"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          tabBarLabel: "Inicial",
+          tabBarActiveTintColor: "#131313",
+          tabBarInactiveTintColor: "#D6D6D6",
+        }}
+      />
+
+      <Tab.Screen
+        name="Sobrenos"
+        component={Sobrenos}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name="info"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          tabBarLabel: "Sobre Nós",
+          tabBarActiveTintColor: "#131313",
+          tabBarInactiveTintColor: "#D6D6D6",
+        }}
+      />
+
+      <Tab.Screen
+        name="Forum"
+        component={Forum}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name="message-circle"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          tabBarLabel: "Fórum",
+          tabBarActiveTintColor: "#131313",
+          tabBarInactiveTintColor: "#D6D6D6",
+        }}
+      />
+
+      <Tab.Screen name="Colaboradores"
+        component={Colaboradores}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name="users"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          tabBarLabel: "Colaboradores",
+          tabBarActiveTintColor: "#131313",
+          tabBarInactiveTintColor: "#D6D6D6",
+        }}
+      />
+
+      <Tab.Screen
+        name="Cadastro"
+        component={Cadastro}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name="edit"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          tabBarLabel: "Cadastro",
+          tabBarActiveTintColor: "#131313",
+          tabBarInactiveTintColor: "#D6D6D6",
+        }}
+      />
+      
     </Tab.Navigator>
   );
 };
