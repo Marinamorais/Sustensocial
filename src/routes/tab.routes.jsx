@@ -66,7 +66,8 @@ const TabRoutes = () => {
         }}
       />
 
-      <Tab.Screen name="Colaboradores"
+      <Tab.Screen
+        name="Colaboradores"
         component={Colaboradores}
         options={{
           tabBarIcon: ({ focused }) => (
