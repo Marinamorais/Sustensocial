@@ -3,6 +3,7 @@ import React from "react";
 import Home from "../screens/Home";
 import Sobrenos from "../screens/Sobrenos";
 import Forum from "../screens/Forum";
+import Colaboradores from "../screens/Colaboradores";
 
 const Drawer = createDrawerNavigator();
 
@@ -12,6 +13,7 @@ const DrawerRoutes = () => {
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Sobrenos" component={Sobrenos} />
       <Drawer.Screen name="Forum" component={Forum} />
+      <Drawer.Screen name="Colaboradores" component={Colaboradores} />
     </Drawer.Navigator>
   );
 };
