@@ -4,6 +4,7 @@ import Home from "../screens/Home";
 import Sobrenos from "../screens/Sobrenos";
 import Forum from "../screens/Forum";
 import Colaboradores from "../screens/Colaboradores";
+import Cadastro from "../screens/Cadastro";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ const StackRoutes = () => {
       <Stack.Screen name="Sobrenos" component={Sobrenos} />
       <Stack.Screen name="Forum" component={Forum} />
       <Stack.Screen name="Colaboradores" component={Colaboradores} />
+      <Stack.Screen name="Cadastro" component={Cadastro} />
     </Stack.Navigator>
   );
 };

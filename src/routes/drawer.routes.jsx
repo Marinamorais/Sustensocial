@@ -4,6 +4,7 @@ import Home from "../screens/Home";
 import Sobrenos from "../screens/Sobrenos";
 import Forum from "../screens/Forum";
 import Colaboradores from "../screens/Colaboradores";
+import Cadastro from "../screens/Cadastro";
 
 const Drawer = createDrawerNavigator();
 
@@ -14,6 +15,7 @@ const DrawerRoutes = () => {
       <Drawer.Screen name="Sobrenos" component={Sobrenos} />
       <Drawer.Screen name="Forum" component={Forum} />
       <Drawer.Screen name="Colaboradores" component={Colaboradores} />
+      <Drawer.Screen name="Cadastro" component={Cadastro} />
     </Drawer.Navigator>
   );
 };
