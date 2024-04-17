@@ -27,6 +27,9 @@ export default function Cadastro({ route }) {
   }, [data, edit]);
 
   function handleAddUser() {
+    if (verifyName(name)) {
+      return;
+    }
     const newUser = {
       id: allUsers.length + 1,
       name,
@@ -40,6 +43,15 @@ export default function Cadastro({ route }) {
     setTelephone("");
     setOng("");
   }
+
+  const verifyName = (name) => {
+    const nameExists = allUsers.some((user) => user.name === name);
+    if (nameExists) {
+      alert("Nome já cadastrado");
+      return true;
+    }
+    return false;
+  };
 
   const handleDelete = () => {
     const newUsers = allUsers.filter((user) => user.id !== data.id);
@@ -90,6 +102,8 @@ export default function Cadastro({ route }) {
           placeholder="Telefone"
           value={telephone}
           onChangeText={setTelephone}
+          keyboardType="numeric"
+          maxLength={11}
         />
         <TextInput
           style={styles.input}

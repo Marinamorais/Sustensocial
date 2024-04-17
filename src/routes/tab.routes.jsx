@@ -69,19 +69,7 @@ const TabRoutes = () => {
       <Tab.Screen
         name="Colaboradores"
         component={Colaboradores}
-        initialParams={{ data: null }}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Feather
-              name="users"
-              size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
-            />
-          ),
-          tabBarLabel: "Colaboradores",
-          tabBarActiveTintColor: "#131313",
-          tabBarInactiveTintColor: "#D6D6D6",
-        }}
+        options={{ tabBarButton: () => null }}
       />
 
       <Tab.Screen
