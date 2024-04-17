@@ -19,7 +19,7 @@ export default function Colaboradores({ route }) {
         <Text style={styles.ong}>{data.ong}</Text>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate("Cadastro", { data })}
+          onPress={() => navigation.navigate("Cadastro", { data, edit: true })}
         >
           <Text style={styles.buttonText}>Editar</Text>
         </TouchableOpacity>

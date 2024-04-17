@@ -66,8 +66,10 @@ const TabRoutes = () => {
         }}
       />
 
-      <Tab.Screen name="Colaboradores"
+      <Tab.Screen
+        name="Colaboradores"
         component={Colaboradores}
+        initialParams={{ data: null }}
         options={{
           tabBarIcon: ({ focused }) => (
             <Feather
@@ -85,6 +87,7 @@ const TabRoutes = () => {
       <Tab.Screen
         name="Cadastro"
         component={Cadastro}
+        initialParams={{ edit: false }}
         options={{
           tabBarIcon: ({ focused }) => (
             <Feather
@@ -98,7 +101,6 @@ const TabRoutes = () => {
           tabBarInactiveTintColor: "#D6D6D6",
         }}
       />
-      
     </Tab.Navigator>
   );
 };

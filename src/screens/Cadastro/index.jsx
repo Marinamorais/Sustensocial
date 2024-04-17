@@ -3,9 +3,17 @@ import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Title from "../../components/Title";
 import styles from "./styles";
+import { useEffect } from "react";
 
 export default function Cadastro({ route }) {
   const { data, edit } = route.params;
+
+  const navigation = useNavigation();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [ong, setOng] = useState("");
+  const [allUsers, setAllUsers] = useState([]);
 
   useEffect(() => {
     if (edit) {
@@ -17,13 +25,6 @@ export default function Cadastro({ route }) {
       clearInputs();
     }
   }, [data, edit]);
-
-  const navigation = useNavigation();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [telephone, setTelephone] = useState("");
-  const [ong, setOng] = useState("");
-  const [allUsers, setAllUsers] = useState([]);
 
   function handleAddUser() {
     const newUser = {
@@ -39,6 +40,11 @@ export default function Cadastro({ route }) {
     setTelephone("");
     setOng("");
   }
+
+  const handleDelete = () => {
+    const newUsers = allUsers.filter((user) => user.id !== data.id);
+    setAllUsers(newUsers);
+  };
 
   const clearInputs = () => {
     setName("");
@@ -60,7 +66,7 @@ export default function Cadastro({ route }) {
     newUsers[userIndex] = newUser;
     setAllUsers(newUsers);
     clearInputs();
-    navigation.goBack();
+    navigation.navigate("Colaboradores", { data: newUser });
   };
 
   return (
@@ -69,27 +75,27 @@ export default function Cadastro({ route }) {
       <View style={styles.form}>
         <TextInput
           style={styles.input}
+          placeholder="Nome"
           value={name}
           onChangeText={setName}
-          placeholder="Nome"
         />
         <TextInput
           style={styles.input}
+          placeholder="Email"
           value={email}
           onChangeText={setEmail}
-          placeholder="E-mail"
         />
         <TextInput
           style={styles.input}
+          placeholder="Telefone"
           value={telephone}
           onChangeText={setTelephone}
-          placeholder="Telefone"
         />
         <TextInput
           style={styles.input}
+          placeholder="ONG"
           value={ong}
           onChangeText={setOng}
-          placeholder="ONG"
         />
         {edit ? (
           <TouchableOpacity style={styles.button} onPress={handleEditUser}>
@@ -113,6 +119,9 @@ export default function Cadastro({ route }) {
               }
             >
               <Text style={styles.buttonText}>Ver</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={handleDelete}>
+              <Text style={styles.buttonText}>Excluir</Text>
             </TouchableOpacity>
           </View>
         ))}
