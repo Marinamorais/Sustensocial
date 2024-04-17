@@ -99,6 +99,11 @@ const TabRoutes = () => {
           tabBarInactiveTintColor: "#D6D6D6",
         }}
       />
+      <Tab.Screen
+        name="Conecta"
+        component={Colaboradores}
+        options={{ tabBarButton: () => null }}
+      />
     </Tab.Navigator>
   );
 };
