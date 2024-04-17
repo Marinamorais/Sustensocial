@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "../screens/Home";
 import Sobrenos from "../screens/Sobrenos";
-import Category from "../screens/Category";
+import Forum from "../screens/Forum";
 
 const Stack = createNativeStackNavigator();
 
@@ -11,7 +11,7 @@ const StackRoutes = () => {
     <Stack.Navigator>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Sobrenos" component={Sobrenos} />
-      <Stack.Screen name="Category" component={Category} />
+      <Stack.Screen name="Forum" component={Forum} />
     </Stack.Navigator>
   );
 };
