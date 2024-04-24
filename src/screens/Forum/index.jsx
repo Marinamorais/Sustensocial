@@ -44,7 +44,17 @@ export default function Forum() {
           description="Oferecemos um espaço para os funcionários compartilharem ideias, experiências e recursos relacionados ao engajamento social. Isso inclui fóruns de discussão, grupos de interesse e ferramentas de colaboração online."
         />
 
-        <Text style={styles.subtitle}>Deixe sua mensagem</Text>
+        <View style={styles.message}>
+          
+        <Text style={styles.label}>Mensagem</Text>
+        <TextInput
+          style={styles.input}
+          value={message}
+          onChangeText={setMessage}
+          placeholder="Digite sua mensagem"
+          multiline
+        />
+
         <Text style={styles.label}>Nome</Text>
         <TextInput
           style={styles.input}
@@ -66,21 +76,13 @@ export default function Forum() {
           </Text>
         ) : null}
 
-        <Text style={styles.label}>Mensagem</Text>
-        <TextInput
-          style={styles.input}
-          value={message}
-          onChangeText={setMessage}
-          placeholder="Digite sua mensagem"
-          multiline
-        />
-
         {errorMessage && (name === "" || message === "") ? (
           <Text style={styles.errorMessage}>{errorMessage}</Text>
         ) : null}
 
         <Button title="Enviar" onPress={handleSendMessage} />
 
+        </View>
         {/* Exibe as mensagens */}
         <View>
           {messages.map((msg, index) => (
@@ -94,6 +96,7 @@ export default function Forum() {
               />
             </View>
           ))}
+            
         </View>
       </View>
     </ScrollView>
