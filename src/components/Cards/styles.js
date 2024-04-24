@@ -1,38 +1,31 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  card: {
-    backgroundColor: "#90A053",
-    padding: 10,
-    borderRadius: 10,
-    borderBlockColor: "black",
-    borderWidth: 1,
+  container: {
     alignItems: "center",
+    marginBottom: 20,
+    position: "relative", // Define o posicionamento relativo para que o card possa ser posicionado absolutamente dentro dele
+  },
+  button: {
+    backgroundColor: "rgba(245, 245, 245, 0.7)", // Cor de fundo com transparência
+    padding: 10,
+    marginTop: -170,
+    borderRadius: 10,
+    alignItems: "center",
+    width: 150, // Largura fixa
+    height: 140, // Altura fixa
+    position: "absolute", // Define o posicionamento absoluto para o card
   },
   image: {
-    width: 80,
-    height: 80,
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: "black",
+    width: 80, // Preenche a largura do container pai
+    height: 80, // Altura fixa para a imagem
+    borderRadius: 10, // Bordas arredondadas
   },
-  text: {
-    color: "#FBF9F7",
-    fontSize: 20,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  navbuttom: {
-    backgroundColor: "#F0E0C7",
-    padding: 5,
-    borderRadius: 5,
-    marginTop: 5,
-    width: 50,
-    alignSelf: "center",
-  },
-  text1: {
-    color: "#9F0951",
-    fontSize: 15,
+  title: {
+    color: "#000",
+    fontSize: 12, // Reduzi o tamanho da fonte
+    fontWeight: "500", // Usei "500" para médio, pois "medium" pode não ser reconhecido em todas as versões
+    marginTop: 10,
     textAlign: "center",
   },
 });

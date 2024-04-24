@@ -22,12 +22,18 @@ export default function Home() {
               O SustenSocial é um aplicativo que tem como objetivo incentivar a
               prática de ações sustentáveis. como a ONG, a e colaboradores.
             </Text>
-            <View style={styles.content02}>
+            <View style={styles.content01}>
               <Image
                 style={styles.imagemfundo}
                 source={require("../../../assets/difi.jpg")}
               />
-              <Cards />
+              <Cards
+                title="Conectar para Transformar"
+                image={require("../../../assets/img.png")}
+                descri="Participe de discussões sobre sustentabilidade"
+                style={styles.cardOverlay}
+              />
+              <View />
             </View>
           </View>
         </View>

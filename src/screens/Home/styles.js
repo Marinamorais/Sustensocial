@@ -11,16 +11,13 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     alignItems: "center",
+    paddingHorizontal: 20,
+    marginTop: 20,
   },
   texto: {
     fontSize: 20,
     color: "#000",
     marginTop: 20,
-  },
-  content01: {
-    marginTop: 20,
-    paddingHorizontal: 20,
-    alignItems: "center",
   },
   mundo: {
     width: 260,
@@ -40,11 +37,17 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   imagemfundo: {
-    width: 260,
-    height: 260,
-    borderRadius: 5,
-    marginTop: 20,
-    opacity: 0.5,
+    width: "100%",
+    height: 200,
+    opacity: 0.6,
+  },
+  cardOverlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    top: -20,
   },
 });
 

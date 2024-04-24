@@ -6,6 +6,7 @@ import Forum from "../screens/Forum";
 import Colaboradores from "../screens/Colaboradores";
 import Cadastro from "../screens/Cadastro";
 import { Feather } from "@expo/vector-icons";
+import Category from "../screens/Categoria";
 
 const Tab = createBottomTabNavigator();
 
@@ -99,10 +100,22 @@ const TabRoutes = () => {
           tabBarInactiveTintColor: "#D6D6D6",
         }}
       />
+
       <Tab.Screen
-        name="Conecta"
-        component={Colaboradores}
-        options={{ tabBarButton: () => null }}
+        name="Categoria"
+        component={Category}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name="users"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          tabBarLabel: "Categoria",
+          tabBarActiveTintColor: "#131313",
+          tabBarInactiveTintColor: "#D6D6D6",
+        }}
       />
     </Tab.Navigator>
   );
