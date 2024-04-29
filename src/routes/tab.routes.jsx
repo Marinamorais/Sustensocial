@@ -84,7 +84,7 @@ const TabRoutes = () => {
           tabBarInactiveTintColor: "#D6D6D6",
         }}
       />
-
+      
       <Tab.Screen
         name="Cadastro"
         component={Cadastro}
