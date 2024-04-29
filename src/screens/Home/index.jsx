@@ -1,9 +1,9 @@
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
+import { useState } from "react";
 import React from "react";
 import styles from "./styles";
 import Header from "../../components/Header";
 import Cards from "../../components/Cards";
-import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 const Conteudos = [

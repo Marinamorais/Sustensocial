@@ -7,7 +7,6 @@ import Colaboradores from "../screens/Colaboradores";
 import Cadastro from "../screens/Cadastro";
 import { Feather } from "@expo/vector-icons";
 import Category from "../screens/Categoria";
-import Conectar from "../screens/Conectar";
 
 const Tab = createBottomTabNavigator();
 
@@ -84,7 +83,7 @@ const TabRoutes = () => {
           tabBarInactiveTintColor: "#D6D6D6",
         }}
       />
-      
+
       <Tab.Screen
         name="Cadastro"
         component={Cadastro}
@@ -117,11 +116,6 @@ const TabRoutes = () => {
           tabBarActiveTintColor: "#131313",
           tabBarInactiveTintColor: "#D6D6D6",
         }}
-      />
-      <Tab.Screen
-        name="Conectar"
-        component={Conectar}
-        options={{ tabBarButton: () => null }}
       />
     </Tab.Navigator>
   );
