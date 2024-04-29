@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Header from "../../components/Header";
 import styles from "./styles";
 import Title from "../../components/Title";
 
@@ -36,6 +37,7 @@ export default function Colaboradores({ route }) {
       >
         <Text style={styles.backButtonText}>Voltar</Text>
       </TouchableOpacity>
+      <Header />
     </View>
   );
 }
