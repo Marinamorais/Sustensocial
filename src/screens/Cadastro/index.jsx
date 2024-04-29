@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { View, Text, TouchableOpacity, TextInput } from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, Text, TouchableOpacity, TextInput, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Title from "../../components/Title";
 import styles from "./styles";
-import { useEffect } from "react";
 
 export default function Cadastro({ route }) {
   const { data, edit } = route.params;
@@ -38,23 +37,20 @@ export default function Cadastro({ route }) {
       ong,
     };
     setAllUsers([...allUsers, newUser]);
-    setName("");
-    setEmail("");
-    setTelephone("");
-    setOng("");
+    clearInputs();
   }
 
   const verifyName = (name) => {
     const nameExists = allUsers.some((user) => user.name === name);
     if (nameExists) {
-      alert("Nome já cadastrado");
+      Alert.alert("Nome já cadastrado");
       return true;
     }
     return false;
   };
 
-  const handleDelete = () => {
-    const newUsers = allUsers.filter((user) => user.id !== data.id);
+  const handleDelete = (userId) => {
+    const newUsers = allUsers.filter((user) => user.id !== userId);
     setAllUsers(newUsers);
   };
 
@@ -73,10 +69,10 @@ export default function Cadastro({ route }) {
       telephone,
       ong,
     };
-    const userIndex = allUsers.findIndex((user) => user.id === data.id);
-    const newUsers = [...allUsers];
-    newUsers[userIndex] = newUser;
-    setAllUsers(newUsers);
+    const updatedUsers = allUsers.map((user) =>
+      user.id === data.id ? newUser : user
+    );
+    setAllUsers(updatedUsers);
     clearInputs();
     navigation.navigate("Colaboradores", { data: newUser });
   };
@@ -134,7 +130,10 @@ export default function Cadastro({ route }) {
             >
               <Text style={styles.buttonText}>Ver</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={handleDelete}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => handleDelete(user.id)}
+            >
               <Text style={styles.buttonText}>Excluir</Text>
             </TouchableOpacity>
           </View>

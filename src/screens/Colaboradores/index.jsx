@@ -1,11 +1,8 @@
+import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
 import Title from "../../components/Title";
-
-import { useEffect } from "react";
-
-import { useNavigation } from "@react-navigation/native";
 
 export default function Colaboradores({ route }) {
   const { data } = route.params;
@@ -33,6 +30,12 @@ export default function Colaboradores({ route }) {
           <Text style={styles.buttonText}>Editar</Text>
         </TouchableOpacity>
       </View>
+      <TouchableOpacity
+        style={styles.backButton}
+        onPress={() => navigation.navigate("Cadastro", { edit: false })}
+      >
+        <Text style={styles.backButtonText}>Voltar</Text>
+      </TouchableOpacity>
     </View>
   );
 }
