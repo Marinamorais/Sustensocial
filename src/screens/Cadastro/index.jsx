@@ -79,7 +79,9 @@ export default function Cadastro({ route }) {
 
   return (
     <View style={styles.container}>
-      <Title title="Cadastro" />
+      <View style={styles.title}>
+        <Text>Cadastro</Text>
+      </View>
       <View style={styles.form}>
         <TextInput
           style={styles.input}
