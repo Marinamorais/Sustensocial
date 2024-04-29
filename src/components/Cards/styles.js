@@ -4,27 +4,26 @@ export default StyleSheet.create({
   container: {
     alignItems: "center",
     marginBottom: 20,
-    position: "relative", // Define o posicionamento relativo para que o card possa ser posicionado absolutamente dentro dele
+    position: "relative",
+    flexDirection: "row", // Alteração para organizar os cards lado a lado
   },
   button: {
-    backgroundColor: "rgba(245, 245, 245, 0.7)", // Cor de fundo com transparência
+    backgroundColor: "rgba(245, 245, 245, 0.7)",
     padding: 10,
-    marginTop: -170,
     borderRadius: 10,
     alignItems: "center",
-    width: 150, // Largura fixa
-    height: 140, // Altura fixa
-    position: "absolute", // Define o posicionamento absoluto para o card
+    width: 110,
+    height: 140,
+    position: "absolute",
   },
   image: {
-    width: 80, // Preenche a largura do container pai
-    height: 80, // Altura fixa para a imagem
-    borderRadius: 10, // Bordas arredondadas
+    width: 80,
+    height: 80,
   },
   title: {
     color: "#000",
-    fontSize: 12, // Reduzi o tamanho da fonte
-    fontWeight: "500", // Usei "500" para médio, pois "medium" pode não ser reconhecido em todas as versões
+    fontSize: 12,
+    fontWeight: "500",
     marginTop: 10,
     textAlign: "center",
   },

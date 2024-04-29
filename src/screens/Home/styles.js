@@ -4,11 +4,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FCFDF4",
+    height: "100%",
     justifyContent: "flex-start",
     alignItems: "center",
   },
   content: {
     flex: 1,
+    height: "100%",
     width: "100%",
     alignItems: "center",
     paddingHorizontal: 20,
@@ -24,6 +26,9 @@ const styles = StyleSheet.create({
     height: 260,
     borderRadius: 5,
     marginTop: 20,
+    alignItems: "center",
+    marginBottom: 10,
+    marginLeft: 50,
   },
   texto01: {
     fontSize: 15,
@@ -43,11 +48,18 @@ const styles = StyleSheet.create({
   },
   cardOverlay: {
     position: "absolute",
-    top: 0,
+    top: -100,
     left: 0,
     right: 0,
     bottom: 0,
-    top: -20,
+  },
+  cardsContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: -1,
+    top: -110,
+    marginRight: 115,
+    marginLeft: 10,
   },
 });
 

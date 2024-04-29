@@ -9,7 +9,6 @@ export default function Home() {
     <ScrollView>
       <View style={styles.container}>
         <Header />
-
         <View style={styles.content}>
           <Text style={styles.texto}>SUSTENSOCIAL</Text>
           <View style={styles.content01}>
@@ -27,12 +26,26 @@ export default function Home() {
                 style={styles.imagemfundo}
                 source={require("../../../assets/difi.jpg")}
               />
-              <Cards
-                title="Conectar para Transformar"
-                image={require("../../../assets/img.png")}
-                descri="Participe de discussões sobre sustentabilidade"
-                style={styles.cardOverlay}
-              />
+              <View style={styles.cardsContainer}>
+                <Cards
+                  title="Conectar para Transformar"
+                  image={require("../../../assets/img.png")}
+                  descri="Participe de discussões sobre sustentabilidade"
+                  style={styles.cardOverlay}
+                />
+                <Cards
+                  title="ONGs"
+                  image={require("../../../assets/img2.png")}
+                  descri="Conheça as ONGs parceiras"
+                  style={styles.cardOverlay}
+                />
+                <Cards
+                  title="Colaboradores"
+                  image={require("../../../assets/img3.png")}
+                  descri="Conheça os colaboradores"
+                  style={styles.cardOverlay}
+                />
+              </View>
               <View />
             </View>
           </View>
