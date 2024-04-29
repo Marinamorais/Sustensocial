@@ -44,45 +44,51 @@ export default function Forum() {
           description="Oferecemos um espaço para os funcionários compartilharem ideias, experiências e recursos relacionados ao engajamento social. Isso inclui fóruns de discussão, grupos de interesse e ferramentas de colaboração online."
         />
 
-        <View style={styles.message}>
-          
-        <Text style={styles.label}>Mensagem</Text>
-        <TextInput
-          style={styles.input}
-          value={message}
-          onChangeText={setMessage}
-          placeholder="Digite sua mensagem"
-          multiline
-        />
+        <View style={styles.messageContainer}>
+          <Text style={styles.label}>Mensagem</Text>
+          <TextInput
+            style={[styles.input, styles.messageInput]}
+            value={message}
+            onChangeText={setMessage}
+            placeholder="Digite sua mensagem"
+            multiline
+          />
 
-        <Text style={styles.label}>Nome</Text>
-        <TextInput
-          style={styles.input}
-          value={name}
-          onChangeText={setName}
-          placeholder="Digite seu nome"
-        />
+          <View style={styles.nameEmailContainer}>
+            <View style={styles.nameContainer}>
+              <Text style={styles.label}>Nome</Text>
+              <TextInput
+                style={[styles.input, styles.nameInput]}
+                value={name}
+                onChangeText={setName}
+                placeholder="Digite seu nome"
+              />
+            </View>
 
-        <Text style={styles.label}>E-mail</Text>
-        <TextInput
-          style={styles.input}
-          value={email}
-          onChangeText={setEmail}
-          placeholder="Digite seu e-mail"
-        />
-        {errorMessage && !email.includes("@") ? (
-          <Text style={styles.errorMessage}>
-            Por favor, insira um endereço de e-mail válido.
-          </Text>
-        ) : null}
+            <View style={styles.emailContainer}>
+              <Text style={styles.label}>E-mail</Text>
+              <TextInput
+                style={[styles.input, styles.emailInput]}
+                value={email}
+                onChangeText={setEmail}
+                placeholder="Digite seu e-mail"
+              />
+            </View>
+          </View>
 
-        {errorMessage && (name === "" || message === "") ? (
-          <Text style={styles.errorMessage}>{errorMessage}</Text>
-        ) : null}
+          {errorMessage && !email.includes("@") ? (
+            <Text style={styles.errorMessage}>
+              Por favor, insira um endereço de e-mail válido.
+            </Text>
+          ) : null}
 
-        <Button title="Enviar" onPress={handleSendMessage} />
+          {errorMessage && (name === "" || message === "") ? (
+            <Text style={styles.errorMessage}>{errorMessage}</Text>
+          ) : null}
 
+          <Button title="Enviar" onPress={handleSendMessage} />
         </View>
+
         {/* Exibe as mensagens */}
         <View>
           {messages.map((msg, index) => (
@@ -96,7 +102,6 @@ export default function Forum() {
               />
             </View>
           ))}
-            
         </View>
       </View>
     </ScrollView>

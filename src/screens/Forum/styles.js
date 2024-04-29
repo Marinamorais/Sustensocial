@@ -3,76 +3,79 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    paddingTop: 20,
+    justifyContent: "flex-start",
     alignItems: "center",
-    backgroundColor: "#FCFDF4",
   },
   title: {
-    fontSize: 20,
-    margin: 15,
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
   },
-  message: {
+  messageContainer: {
     width: "90%",
-    margin: 15,
-    backgroundColor: "#F2F2EE",
+
+    backgroundColor: "#FFF",
+    padding: 20,
+    marginBottom: 20,
   },
   label: {
     fontSize: 16,
     marginBottom: 5,
   },
   input: {
+    backgroundColor: "",
+    borderColor: "#000",
     borderWidth: 1,
-    borderColor: "black",
-    padding: 10,
-    marginBottom: 10,
-  },
-  error: {
-    color: "red",
-    marginBottom: 10,
-  },
-  button: {
-    backgroundColor: "blue",
-    padding: 10,
     borderRadius: 5,
-    alignItems: "center",
+    padding: 10,
+    marginBottom: 10,
   },
-  buttonText: {
-    color: "white",
-  },
-  messages: {
-    width: "90%",
-    margin: 15,
+  messageInput: {
     backgroundColor: "#8DA7507A",
+    height: 150, // Aumenta a altura do campo de mensagem
   },
-  messageCard: {
+  nameEmailContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  nameContainer: {
+    flex: 1,
+    marginRight: 10,
+  },
+  emailContainer: {
+    flex: 1,
+    marginLeft: 10,
+  },
+  nameInput: {
+    backgroundColor: "#8DA7507A",
+    borderColor: "#000",
     borderWidth: 1,
-    borderColor: "black",
+    borderRadius: 5,
     padding: 10,
     marginBottom: 10,
   },
-  messageName: {
-    fontWeight: "bold",
-  },
-  messageEmail: {
-    color: "gray",
-  },
-  messageText: {
-    marginBottom: 10,
-  },
-  deleteButton: {
-    backgroundColor: "red",
-    padding: 5,
+  emailInput: {
+    backgroundColor: "#8DA7507A",
+    borderColor: "#000",
+    borderWidth: 1,
     borderRadius: 5,
-    alignItems: "center",
-  },
-  deleteButtonText: {
-    color: "white",
-  },
-  messageContainer: {
+    padding: 10,
     marginBottom: 10,
   },
   errorMessage: {
     color: "red",
+    marginBottom: 10,
+  },
+  messageName: {
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+  messageEmail: {
+    fontStyle: "italic",
+    marginBottom: 5,
+  },
+  messageText: {
     marginBottom: 10,
   },
 });
