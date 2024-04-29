@@ -31,9 +31,15 @@ export default function Cadastro({ route }) {
   };
 
   function handleAddUser() {
+    if (!name || !email || !telephone || !ong) {
+      Alert.alert("Por favor, preencha todos os campos.");
+      return;
+    }
+
     if (verifyName(name)) {
       return;
     }
+
     const newUser = {
       id: allUsers.length + 1,
       name,
@@ -67,6 +73,11 @@ export default function Cadastro({ route }) {
   };
 
   const handleEditUser = () => {
+    if (!name || !email || !telephone || !ong) {
+      Alert.alert("Por favor, preencha todos os campos.");
+      return;
+    }
+
     const newUser = {
       id: data.id,
       name,
