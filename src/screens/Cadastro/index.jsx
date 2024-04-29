@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, TextInput, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Title from "../../components/Title";
-import { View } from "react-native";
-import React from "react";
 import styles from "./styles";
 import Header from "../../components/Header";
 
@@ -21,12 +19,16 @@ export default function Cadastro({ route }) {
     if (edit) {
       setName(data.name);
       setEmail(data.email);
-      setTelephone(data.telephone);
+      setTelephone(resetPhone(data.telephone));
       setOng(data.ong);
     } else {
       clearInputs();
     }
   }, [data, edit]);
+
+  const resetPhone = (phoneNumber) => {
+    return phoneNumber.replace(/\D/g, "");
+  };
 
   function handleAddUser() {
     if (verifyName(name)) {
