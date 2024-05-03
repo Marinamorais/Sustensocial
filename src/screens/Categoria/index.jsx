@@ -1,4 +1,5 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { useState } from "react";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import styles from "./styles.js";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -10,7 +11,13 @@ export default function Category({ route }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{data.nome}</Text>
-      <Text style={styles.description}>{data.texto}</Text>
+      <View style={styles.container01}>
+       <Image source={data.image} style={styles.image} />
+      </View>
+      <View style={styles.card}>
+        <Text style={styles.description}>{data.texto}</Text>
+      </View>
+  
       <TouchableOpacity
         onPress={() => {
           navigation.navigate("Home");
