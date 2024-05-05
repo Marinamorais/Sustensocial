@@ -1,29 +1,22 @@
 import React from "react";
-import { View, Text, Image, Dimensions } from "react-native";
-import Carousel from "react-native-snap-carousel";
+import { View, Text, Image, Linking, ScrollView } from "react-native";
 import styles from "./styles";
 
-export default function CardSobrenos({ images }) {
-  const renderCarouselItem = ({ item }) => {
-    return (
-      <View style={styles.imageContainer}>
-        <Image source={item} style={styles.image} />
-      </View>
-    );
-  };
-
+export default function CardSobrenos({ videoLink, description, images, image }) {
   return (
-    <View style={styles.cardContainer}>
-      <Carousel
-        data={images}
-        renderItem={renderCarouselItem}
-        sliderWidth={Dimensions.get("window").width}
-        itemWidth={Dimensions.get("window").width * 0.8} // 80% da largura da tela
-        loop
-        autoplay
-        autoplayInterval={3000}
-        layout="default"
-      />
+    <View style={styles.containerSobrenos}>
+      <Image source={image} style={styles.logo} />
+      <Text style={styles.videoLink} onPress={() => Linking.openURL(videoLink)}>
+        Clique aqui para assistir ao vídeo
+      </Text>
+      <Text style={styles.description}>{description}</Text>
+      <ScrollView horizontal={true} contentContainerStyle={styles.containerIntegrantes}>
+        <View style={styles.integranteGroup}>
+          {images.map((image, index) => (
+            <Image key={index} source={image} style={styles.integranteImage} />
+          ))}
+        </View>
+      </ScrollView>
     </View>
   );
 }
