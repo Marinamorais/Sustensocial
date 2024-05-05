@@ -1,4 +1,3 @@
-// Sobrenos.js
 import React from "react";
 import { View, ScrollView, Text } from "react-native";
 import styles from "./styles";
@@ -11,19 +10,40 @@ export default function Sobrenos() {
       <View style={styles.container}>
         <Header />
         <Text style={styles.title}>Sobre Nós</Text>
-        <CardSobrenos 
-          image={require("../../../assets/sobrenos.png.png")} // Corrigido o nome da propriedade
-          videoLink="https://www.youtube.com/watch?v=0b9Qz5v9J7o"
+        <CardSobrenos
+
+          image={require("../../../assets/sobrenos.png.png")}
+          videoLink="https://www.youtube.com/watch?v=JGwWNGJdvx8"
           description="Somos uma plataforma de engajamento social, unindo pessoas e organizações para causar um impacto positivo. Valorizamos cada voz e acreditamos no poder das pequenas ações. Nossa comunidade acolhedora compartilha experiências, aprende junto e busca um mundo mais justo e sustentável. Aqui, você encontrará recursos e apoio para fazer a diferença. Junte-se a nós!"
-          images={[
-            require("../../../assets/matheus.png"),
-            require("../../../assets/marina.png"),
-            require("../../../assets/thayna.png"),
-            require("../../../assets/vitor.png"),
-            require("../../../assets/nicolas.png")
+
+   
+          integrantes={[
+            {
+              name: "Matheus",
+              image: require("../../../assets/matheus.png"),
+            },
+            {
+              name: "Marina",
+              image: require("../../../assets/marina.png"),
+            },
+            {
+              name: "Thayná",
+              image: require("../../../assets/thayna.png"),
+            },
+            {
+              name: "Nicolas",
+              image: require("../../../assets/nicolas.png"),
+            },
+            {
+              name: "Vitor",
+              image: require("../../../assets/vitor.png"),
+            }
+        
           ]}
+        
         />
-      </View>
+
+    </View>
     </ScrollView>
   );
 }
