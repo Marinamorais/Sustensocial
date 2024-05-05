@@ -10,6 +10,7 @@ export default function Forum() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
+  const [editingIndex, setEditingIndex] = useState(null); // Estado para rastrear o índice da mensagem em edição
 
   const handleSendMessage = () => {
     if (!name || !email || !message) {
@@ -17,12 +18,25 @@ export default function Forum() {
     } else if (!email.includes("@")) {
       setErrorMessage("Por favor, insira um endereço de e-mail válido.");
     } else {
-      const newMessage = {
-        name: name,
-        email: email,
-        message: message,
-      };
-      setMessages([...messages, newMessage]);
+      if (editingIndex !== null) {
+        // Se estiver editando, atualize a mensagem existente
+        const updatedMessages = [...messages];
+        updatedMessages[editingIndex] = {
+          name: name,
+          email: email,
+          message: message,
+        };
+        setMessages(updatedMessages);
+        setEditingIndex(null); // Limpe o índice de edição
+      } else {
+        // Caso contrário, adicione uma nova mensagem
+        const newMessage = {
+          name: name,
+          email: email,
+          message: message,
+        };
+        setMessages([...messages, newMessage]);
+      }
       setName("");
       setEmail("");
       setMessage("");
@@ -37,11 +51,12 @@ export default function Forum() {
   };
 
   const handleEditMessage = (index) => {
+    // Preencha os campos com os dados da mensagem selecionada para edição
     const msgToEdit = messages[index];
     setName(msgToEdit.name);
     setEmail(msgToEdit.email);
     setMessage(msgToEdit.message);
-    // Implementar a lógica para edição da mensagem
+    setEditingIndex(index); // Defina o índice de edição
   };
 
   return (
