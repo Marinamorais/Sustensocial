@@ -10,7 +10,13 @@ export default function Forum() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
-  const [editingIndex, setEditingIndex] = useState(null); // Estado para rastrear o índice da mensagem em edição
+  const [editingMessage, setEditingMessage] = useState(null);
+
+  const clearFields = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   const handleSendMessage = () => {
     if (!name || !email || !message) {
@@ -18,45 +24,30 @@ export default function Forum() {
     } else if (!email.includes("@")) {
       setErrorMessage("Por favor, insira um endereço de e-mail válido.");
     } else {
-      if (editingIndex !== null) {
-        // Se estiver editando, atualize a mensagem existente
+      if (editingMessage !== null) {
         const updatedMessages = [...messages];
-        updatedMessages[editingIndex] = {
-          name: name,
-          email: email,
-          message: message,
-        };
+        updatedMessages[editingMessage] = { name, email, message };
         setMessages(updatedMessages);
-        setEditingIndex(null); // Limpe o índice de edição
+        setEditingMessage(null);
       } else {
-        // Caso contrário, adicione uma nova mensagem
-        const newMessage = {
-          name: name,
-          email: email,
-          message: message,
-        };
-        setMessages([...messages, newMessage]);
+        setMessages([...messages, { name, email, message }]);
       }
-      setName("");
-      setEmail("");
-      setMessage("");
+      clearFields();
       setErrorMessage("");
     }
   };
 
   const handleDeleteMessage = (index) => {
-    const newMessages = [...messages];
-    newMessages.splice(index, 1);
+    const newMessages = messages.filter((_, i) => i !== index);
     setMessages(newMessages);
   };
 
   const handleEditMessage = (index) => {
-    // Preencha os campos com os dados da mensagem selecionada para edição
     const msgToEdit = messages[index];
     setName(msgToEdit.name);
     setEmail(msgToEdit.email);
     setMessage(msgToEdit.message);
-    setEditingIndex(index); // Defina o índice de edição
+    setEditingMessage(index);
   };
 
   return (
@@ -101,29 +92,20 @@ export default function Forum() {
             </View>
           </View>
 
-          {errorMessage && !email.includes("@") ? (
-            <Text style={styles.errorMessage}>
-              {errorMessage}
-            </Text>
-          ) : null}
-
-          {errorMessage && email.includes("@") && (name === "" || message === "") ? (
-            <Text style={styles.errorMessage}>
-              {errorMessage}
-            </Text>
+          {errorMessage ? (
+            <Text style={styles.errorMessage}>{errorMessage}</Text>
           ) : null}
 
           <Button title="Enviar" onPress={handleSendMessage} />
         </View>
 
-        {/* Exibe as mensagens */}
         <View>
           {messages.map((msg, index) => (
             <View key={index} style={styles.messageContainer}>
               <Text style={styles.messageName}>{msg.name}</Text>
               <Text style={styles.messageEmail}>{msg.email}</Text>
               <Text style={styles.messageText}>{msg.message}</Text>
-              <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+              <View style={styles.buttonContainer}>
                 <Button
                   title="Editar"
                   onPress={() => handleEditMessage(index)}
