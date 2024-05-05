@@ -10,11 +10,11 @@ export default function Sobrenos() {
     <ScrollView contentContainerStyle={styles.scrollViewContent}>
       <View style={styles.container}>
         <Header />
-        <Text style={styles.title}>SUSTENSOCIAL</Text>
+        <Text style={styles.title}>Sobre Nós</Text>
         <CardSobrenos 
-          image={require("../../../assets/imagem-sobrenos.png")} // Corrigido o nome da propriedade
+          image={require("../../../assets/sobrenos.png.png")} // Corrigido o nome da propriedade
           videoLink="https://www.youtube.com/watch?v=0b9Qz5v9J7o"
-          description="O SustenSocial é um projeto de extensão da Universidade Federal do Rio Grande do Norte (UFRN) que tem como objetivo promover ações de sustentabilidade e responsabilidade social. O projeto foi criado em 2021 e é composto por cinco estudantes de diferentes cursos da UFRN."
+          description="Somos uma plataforma de engajamento social, unindo pessoas e organizações para causar um impacto positivo. Valorizamos cada voz e acreditamos no poder das pequenas ações. Nossa comunidade acolhedora compartilha experiências, aprende junto e busca um mundo mais justo e sustentável. Aqui, você encontrará recursos e apoio para fazer a diferença. Junte-se a nós!"
           images={[
             require("../../../assets/matheus.png"),
             require("../../../assets/marina.png"),
