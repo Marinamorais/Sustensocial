@@ -48,6 +48,9 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#00AA00", // Verde
   },
+  integranteName: {
+    textAlign: "center", // Centraliza o texto
+  },
 });
 
 export default styles;

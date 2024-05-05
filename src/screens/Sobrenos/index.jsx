@@ -19,23 +19,23 @@ export default function Sobrenos() {
    
           integrantes={[
             {
-              name: "Matheus",
+              name: "Matheus Scaranello",
               image: require("../../../assets/matheus.png"),
             },
             {
-              name: "Marina",
+              name: "Marina Morais",
               image: require("../../../assets/marina.png"),
             },
             {
-              name: "Thayná",
+              name: "Thayná Vazzoler",
               image: require("../../../assets/thayna.png"),
             },
             {
-              name: "Nicolas",
+              name: "Nickolas Lira",
               image: require("../../../assets/nicolas.png"),
             },
             {
-              name: "Vitor",
+              name: "Vitor Mattos",
               image: require("../../../assets/vitor.png"),
             }
         
