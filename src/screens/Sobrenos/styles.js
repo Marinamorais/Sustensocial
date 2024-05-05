@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#FCFDF4", // Branco puro
+    backgroundColor: "#FCFDF4", 
     alignItems: "center",
   },
   title: {
