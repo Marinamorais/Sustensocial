@@ -1,5 +1,5 @@
-import { View, Text, Button, TextInput, ScrollView } from "react-native";
 import React, { useState } from "react";
+import { View, Text, Button, TextInput, ScrollView } from "react-native";
 import styles from "./styles";
 import Header from "../../components/Header";
 import CardForum from "../../components/CardForum";
@@ -12,7 +12,11 @@ export default function Forum() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSendMessage = () => {
-    if (name && email.includes("@") && message) {
+    if (!name || !email || !message) {
+      setErrorMessage("Por favor, preencha todos os campos.");
+    } else if (!email.includes("@")) {
+      setErrorMessage("Por favor, insira um endereço de e-mail válido.");
+    } else {
       const newMessage = {
         name: name,
         email: email,
@@ -23,8 +27,6 @@ export default function Forum() {
       setEmail("");
       setMessage("");
       setErrorMessage("");
-    } else {
-      setErrorMessage("Por favor, preencha todos os campos corretamente.");
     }
   };
 
@@ -78,12 +80,14 @@ export default function Forum() {
 
           {errorMessage && !email.includes("@") ? (
             <Text style={styles.errorMessage}>
-              Por favor, insira um endereço de e-mail válido.
+              {errorMessage}
             </Text>
           ) : null}
 
-          {errorMessage && (name === "" || message === "") ? (
-            <Text style={styles.errorMessage}>{errorMessage}</Text>
+          {errorMessage && email.includes("@") && (name === "" || message === "") ? (
+            <Text style={styles.errorMessage}>
+              {errorMessage}
+            </Text>
           ) : null}
 
           <Button title="Enviar" onPress={handleSendMessage} />
