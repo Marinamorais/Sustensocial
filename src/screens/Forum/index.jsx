@@ -36,6 +36,14 @@ export default function Forum() {
     setMessages(newMessages);
   };
 
+  const handleEditMessage = (index) => {
+    const msgToEdit = messages[index];
+    setName(msgToEdit.name);
+    setEmail(msgToEdit.email);
+    setMessage(msgToEdit.message);
+    // Implementar a lógica para edição da mensagem
+  };
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -100,10 +108,16 @@ export default function Forum() {
               <Text style={styles.messageName}>{msg.name}</Text>
               <Text style={styles.messageEmail}>{msg.email}</Text>
               <Text style={styles.messageText}>{msg.message}</Text>
-              <Button
-                title="Excluir"
-                onPress={() => handleDeleteMessage(index)}
-              />
+              <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+                <Button
+                  title="Editar"
+                  onPress={() => handleEditMessage(index)}
+                />
+                <Button
+                  title="Excluir"
+                  onPress={() => handleDeleteMessage(index)}
+                />
+              </View>
             </View>
           ))}
         </View>
