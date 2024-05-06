@@ -72,7 +72,7 @@ const TabRoutes = () => {
         component={Colaboradores}
         options={{ tabBarButton: () => null }}
       />
-      
+
       <Tab.Screen
         name="Cadastro"
         component={Cadastro}
