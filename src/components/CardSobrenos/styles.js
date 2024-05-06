@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#FFFFFF", 
+    backgroundColor: "#FCFDF4",
   },
   logo: {
     width: 200,
@@ -14,11 +14,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: "#00AA00", 
+    borderColor: "#00AA00",
   },
   videoLink: {
     fontSize: 20,
-    color: "#00AA00", 
+    color: "#00AA00",
     marginBottom: 20,
     textDecorationLine: "underline",
     fontWeight: "bold",
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
     marginBottom: 20,
-    color: "#333333", 
+    color: "#333333",
     lineHeight: 24,
     fontStyle: "italic",
   },
@@ -46,10 +46,14 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     marginHorizontal: 10,
     borderWidth: 2,
-    borderColor: "#00AA00", 
+    borderColor: "#00AA00",
   },
   integranteName: {
     textAlign: "center",
+  },
+  funcao: {
+    textAlign: "center",
+    fontStyle: "bold",
   },
 });
 
