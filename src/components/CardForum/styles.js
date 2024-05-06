@@ -4,16 +4,16 @@ const styles = StyleSheet.create({
   cardContainer: {
     flexDirection: "row",
     alignItems: "center",
-    padding: 7, // Aumentando o padding para 20
+    padding: 7, 
     backgroundColor: "#618944", 
     opacity: 0.7,
-    borderRadius: 0, // Removendo as bordas
+    borderRadius: 0, 
     marginVertical: 5,
-    width: 393, // Definindo uma largura de 395px
-    height: 340, // Definindo uma altura de 120px
+    width: 393, 
+    height: 340, 
   },
   image: {
-    width: "50%", // Definindo uma largura de 40% para a imagem
+    width: "50%", 
     height: "80%",
     marginRight: 10,
   },

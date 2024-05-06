@@ -3,9 +3,9 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
+  backgroundColor:"#FCFDF4",
     justifyContent: "flex-start",
-    alignItems: "center",
+    alignItems: "center"
   },
   title: {
     marginTop: 20,
