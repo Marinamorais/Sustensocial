@@ -51,6 +51,10 @@ const styles = StyleSheet.create({
   integranteName: {
     textAlign: "center",
   },
+  funcao: {
+    textAlign: "center",
+    fontStyle: "bold",
+  },
 });
 
 export default styles;
