@@ -1,5 +1,5 @@
-import { View, Text, Button, TextInput, ScrollView } from "react-native";
 import React, { useState } from "react";
+import { View, Text, Button, TextInput, ScrollView, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import Header from "../../components/Header";
 import CardForum from "../../components/CardForum";
@@ -10,28 +10,44 @@ export default function Forum() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
+  const [editingMessage, setEditingMessage] = useState(null);
+
+  const clearFields = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   const handleSendMessage = () => {
-    if (name && email.includes("@") && message) {
-      const newMessage = {
-        name: name,
-        email: email,
-        message: message,
-      };
-      setMessages([...messages, newMessage]);
-      setName("");
-      setEmail("");
-      setMessage("");
-      setErrorMessage("");
+    if (!name || !email || !message) {
+      setErrorMessage("Por favor, preencha todos os campos.");
+    } else if (!email.includes("@")) {
+      setErrorMessage("Por favor, insira um endereço de e-mail válido.");
     } else {
-      setErrorMessage("Por favor, preencha todos os campos corretamente.");
+      if (editingMessage !== null) {
+        const updatedMessages = [...messages];
+        updatedMessages[editingMessage] = { name, email, message };
+        setMessages(updatedMessages);
+        setEditingMessage(null);
+      } else {
+        setMessages([...messages, { name, email, message }]);
+      }
+      clearFields();
+      setErrorMessage("");
     }
   };
 
   const handleDeleteMessage = (index) => {
-    const newMessages = [...messages];
-    newMessages.splice(index, 1);
+    const newMessages = messages.filter((_, i) => i !== index);
     setMessages(newMessages);
+  };
+
+  const handleEditMessage = (index) => {
+    const msgToEdit = messages[index];
+    setName(msgToEdit.name);
+    setEmail(msgToEdit.email);
+    setMessage(msgToEdit.message);
+    setEditingMessage(index);
   };
 
   return (
@@ -76,30 +92,33 @@ export default function Forum() {
             </View>
           </View>
 
-          {errorMessage && !email.includes("@") ? (
-            <Text style={styles.errorMessage}>
-              Por favor, insira um endereço de e-mail válido.
-            </Text>
-          ) : null}
-
-          {errorMessage && (name === "" || message === "") ? (
+          {errorMessage ? (
             <Text style={styles.errorMessage}>{errorMessage}</Text>
           ) : null}
 
           <Button title="Enviar" onPress={handleSendMessage} />
         </View>
 
-        {/* Exibe as mensagens */}
         <View>
           {messages.map((msg, index) => (
             <View key={index} style={styles.messageContainer}>
               <Text style={styles.messageName}>{msg.name}</Text>
               <Text style={styles.messageEmail}>{msg.email}</Text>
               <Text style={styles.messageText}>{msg.message}</Text>
-              <Button
-                title="Excluir"
-                onPress={() => handleDeleteMessage(index)}
-              />
+              <View style={styles.buttonContainer}>
+                <TouchableOpacity
+                  style={[styles.button, styles.buttonEditar]}
+                  onPress={() => handleEditMessage(index)}
+                >
+                  <Text style={styles.buttonText}>Editar</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.button, styles.buttonExcluir]}
+                  onPress={() => handleDeleteMessage(index)}
+                >
+                  <Text style={styles.buttonText}>Excluir</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           ))}
         </View>
