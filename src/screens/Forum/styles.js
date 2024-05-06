@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   messageContainer: {
-    width: "90%",
+    width: "100%",
 
     backgroundColor: "#FFF",
     padding: 20,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   nameContainer: {
     flex: 1,
     marginRight: 10,
-  },
+      },
   emailContainer: {
     flex: 1,
     marginLeft: 10,
