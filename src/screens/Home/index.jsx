@@ -13,6 +13,8 @@ const Conteudos = [
     image: require("../../../assets/img.png"),
     texto:
       "Selecionamos anualmente projetos de impacto social e ambiental para serem implementados nas cidades onde a empresa atua, com foco nas áreas de educação científica; empregabilidade; ou educação ambiental e proteção dos recursos naturais e da biodiversidade",
+    titulo:
+      "Incluir+: potencializando a rede de empregabilidade das pessoas com deficiência”, do Instituto Lucas Amoroso (ILA)",
   },
 
   {
