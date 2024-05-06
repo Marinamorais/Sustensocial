@@ -13,6 +13,9 @@ const Conteudos = [
     image: require("../../../assets/img.png"),
     texto:
       "Selecionamos anualmente projetos de impacto social e ambiental para serem implementados nas cidades onde a empresa atua, com foco nas áreas de educação científica; empregabilidade; ou educação ambiental e proteção dos recursos naturais e da biodiversidade",
+    titulo: "Aprendizagem para corações e mentes”, da Gaia+",
+    info: "Projeto busca medir o quanto os sentimentos e emoções são capazes de impactar a capacidade de aprendizagem, como a Química das Relações. Programa foi desenvolvido pela Universidade de Emory (EUA) e utiliza metodologia científica para melhorar a conexão entre professores e estudantes, fortalecendo a compaixão, a autoconsciência e o engajamento social nas escolas.",
+
   },
 
   {
