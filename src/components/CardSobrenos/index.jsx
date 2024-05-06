@@ -8,6 +8,7 @@ export default function CardSobrenos({ videoLink, description, image, integrante
       <View key={index} style={styles.integranteContainer}>
         <Image source={integrante.image} style={styles.integranteImage} />
         <Text style={styles.integranteName}>{integrante.name}</Text>
+        <Text style={styles.funcao}>{integrante.funcao}</Text>
       </View>
     ));
   };

@@ -16,17 +16,15 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   messageContainer: {
-<<<<<<< HEAD
     width: "100%",
 
-=======
     width: "90%",
->>>>>>> f99337b2c6869f10335304f74640bfe11948c568
+
     backgroundColor: "#FFF",
     padding: 20,
     marginBottom: 20,
-    marginTop: 10, 
-    paddingBottom: 20, 
+    marginTop: 10,
+    paddingBottom: 20,
   },
   label: {
     fontSize: 16,
@@ -43,7 +41,6 @@ const styles = StyleSheet.create({
   messageInput: {
     height: 150,
     backgroundColor: "#8DA7507A",
-
   },
   nameEmailContainer: {
     flexDirection: "row",
@@ -53,7 +50,7 @@ const styles = StyleSheet.create({
   nameContainer: {
     flex: 1,
     marginRight: 10,
-      },
+  },
   emailContainer: {
     flex: 1,
     marginLeft: 10,
@@ -88,7 +85,8 @@ const styles = StyleSheet.create({
   },
   messageText: {
     marginBottom: 10,
-  },  button: {
+  },
+  button: {
     padding: 10,
     borderRadius: 8,
     width: 100,
@@ -98,14 +96,14 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 20, 
+    marginTop: 20,
     paddingHorizontal: 20,
-    paddingBottom: 10, 
+    paddingBottom: 10,
   },
   button: {
     padding: 10,
     borderRadius: 8,
-    width: "48%", 
+    width: "48%",
     alignItems: "center",
     justifyContent: "center",
   },
