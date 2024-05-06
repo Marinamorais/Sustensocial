@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Button, TextInput, ScrollView } from "react-native";
+import { View, Text, Button, TextInput, ScrollView, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import Header from "../../components/Header";
 import CardForum from "../../components/CardForum";
@@ -106,14 +106,18 @@ export default function Forum() {
               <Text style={styles.messageEmail}>{msg.email}</Text>
               <Text style={styles.messageText}>{msg.message}</Text>
               <View style={styles.buttonContainer}>
-                <Button
-                  title="Editar"
+                <TouchableOpacity
+                  style={[styles.button, styles.buttonEditar]}
                   onPress={() => handleEditMessage(index)}
-                />
-                <Button
-                  title="Excluir"
+                >
+                  <Text style={styles.buttonText}>Editar</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.button, styles.buttonExcluir]}
                   onPress={() => handleDeleteMessage(index)}
-                />
+                >
+                  <Text style={styles.buttonText}>Excluir</Text>
+                </TouchableOpacity>
               </View>
             </View>
           ))}
