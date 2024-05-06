@@ -13,10 +13,6 @@ const Conteudos = [
     image: require("../../../assets/img.png"),
     texto:
       "Selecionamos anualmente projetos de impacto social e ambiental para serem implementados nas cidades onde a empresa atua, com foco nas áreas de educação científica; empregabilidade; ou educação ambiental e proteção dos recursos naturais e da biodiversidade",
-    titulo: "“Aprendizagem para corações e mentes”, da Gaia+”",
-    info: " Projeto busca medir o quanto os sentimentos e emoções são capazes de impactar a capacidade de aprendizagem, como a Química das Relações. Programa foi desenvolvido pela Universidade de Emory (EUA) e utiliza metodologia científica para melhorar a conexão entre professores e estudantes, fortalecendo a compaixão, a autoconsciência e o engajamento social nas escolas.",
-    titulo01: "“Academia de Biotecnologia Agrícola”",
-    info01: "Convocar e formar 60 estudantes, dos quais pelo menos 65% são mulheres, com idades entre 13 e os 18 anos, das cidades de Quintero, Quinta Normal e Concón. A capacitação será realizada por meio do uso de kits laboratoriais em casa e sessões online, com o objetivo de familiarizar os participantes com as ferramentas de biotecnologia e formulação de projetos. Pelo menos 12 projetos científicos e tecnológicos serão elaborados para resolver problemas locais.",
   },
 
   {
