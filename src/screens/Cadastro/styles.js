@@ -53,7 +53,7 @@ const Styles = StyleSheet.create({
   },
   buttoncadastro: {
     paddingVertical: 15,
-    backgroundColor: "#38532E", // Cor de fundo do botão
+    backgroundColor: "#38532E",
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
@@ -75,7 +75,7 @@ const Styles = StyleSheet.create({
     justifyContent: "center",
     marginBottom: 20,
     width: "30%",
-    backgroundColor: "#FF6347", // Cor de fundo do botão "Ver"
+    backgroundColor: "#FF6347", 
   },
   buttonexcluir: {
     paddingVertical: 15,
@@ -84,7 +84,7 @@ const Styles = StyleSheet.create({
     justifyContent: "center",
     marginBottom: 20,
     width: "30%",
-    backgroundColor: "#4682B4", // Cor de fundo do botão "Excluir"
+    backgroundColor: "#4682B4", 
   },
   error: {
     color: "#FF0000",
