@@ -146,19 +146,19 @@ export default function Cadastro({ route }) {
         {allUsers.map((user) => (
           <View key={user.id} style={Styles.user}>
             <Text style={Styles.userText}>{user.name}</Text>
-            <TouchableOpacity
-              style={Styles.button}
+            <TouchableOpacity style={Styles.buttonver}
+            
               onPress={() =>
                 navigation.navigate("Colaboradores", { data: user })
               }
             >
-              <Text style={Styles.buttonver}>Ver</Text>
+              <Text>Ver</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              style={Styles.button}
+            <TouchableOpacity style={Styles.buttonexcluir}
+            
               onPress={() => handleDelete(user.id)}
             >
-              <Text style={Styles.buttonexcluir}>Excluir</Text>
+              <Text >Excluir</Text>
             </TouchableOpacity>
           </View>
         ))}
