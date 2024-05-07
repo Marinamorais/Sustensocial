@@ -3,9 +3,9 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
+  backgroundColor:"#FCFDF4",
     justifyContent: "flex-start",
-    alignItems: "center",
+    alignItems: "center"
   },
   title: {
     marginTop: 20,
@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   messageContainer: {
-    width: "100%",
     width: "90%",
     backgroundColor: "#FFF",
     padding: 20,

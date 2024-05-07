@@ -17,22 +17,27 @@ export default function Sobrenos() {
           integrantes={[
             {
               name: "Matheus Scaranello",
+              funcao: "Gerente de Projeto",
               image: require("../../../assets/matheus.png"),
             },
             {
               name: "Marina Morais",
+              funcao: "Designer de UI/UX",
               image: require("../../../assets/marina.png"),
             },
             {
               name: "Thayná Vazzoler",
+              funcao: "Especialista em ESG",
               image: require("../../../assets/thayna.png"),
             },
             {
               name: "Nickolas Lira",
+              funcao: "Analista de qualidade",
               image: require("../../../assets/nicolas.png"),
             },
             {
               name: "Vitor Mattos",
+              funcao: "Documentador",
               image: require("../../../assets/vitor.png"),
             },
           ]}
