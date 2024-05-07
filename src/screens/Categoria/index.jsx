@@ -36,6 +36,5 @@ export default function Category({ route }) {
       </TouchableOpacity>
     </View>
     </ScrollView>
-   
   );
 }
