@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, TextInput, Alert, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Title from "../../components/Title";
-import styles from "./styles";
+import Styles from "./styles";
 import Header from "../../components/Header";
 
 export default function Cadastro({ route }) {
@@ -95,29 +95,29 @@ export default function Cadastro({ route }) {
 
   return (
     <ScrollView>
-    <View style={styles.container}>
+    <View style={Styles.container}>
      
       <Header title="Cadastro" />
   
-      <View style={styles.title}>
+      <View style={Styles.card}>
       
-        <Text>Cadastro</Text>
-      </View>
-      <View style={styles.form}>
+        <Text style={Styles.title}>Cadastro</Text>
+        
+      <View style={Styles.form}>
         <TextInput
-          style={styles.input}
+          style={Styles.input}
           placeholder="Nome"
           value={name}
           onChangeText={setName}
         />
         <TextInput
-          style={styles.input}
+          style={Styles.input}
           placeholder="Email"
           value={email}
           onChangeText={setEmail}
         />
         <TextInput
-          style={styles.input}
+          style={Styles.input}
           placeholder="Telefone"
           value={telephone}
           onChangeText={setTelephone}
@@ -125,39 +125,40 @@ export default function Cadastro({ route }) {
           maxLength={11}
         />
         <TextInput
-          style={styles.input}
+          style={Styles.input}
           placeholder="ONG"
           value={ong}
           onChangeText={setOng}
         />
+        </View>
         {edit ? (
-          <TouchableOpacity style={styles.button} onPress={handleEditUser}>
-            <Text style={styles.buttonText}>Editar</Text>
+          <TouchableOpacity style={Styles.button} onPress={handleEditUser}>
+            <Text style={Styles.buttonText}>Editar</Text>
           </TouchableOpacity>
         ) : (
-          <TouchableOpacity style={styles.button} onPress={handleAddUser}>
-            <Text style={styles.buttonText}>Cadastrar</Text>
+          <TouchableOpacity style={Styles.button} onPress={handleAddUser}>
+            <Text style={Styles.buttonText}>Cadastrar</Text>
           </TouchableOpacity>
         )}
       </View>
-      <View style={styles.users}>
+      <View style={Styles.users}>
         <Title title="Usuários" />
         {allUsers.map((user) => (
-          <View key={user.id} style={styles.user}>
-            <Text style={styles.userText}>{user.name}</Text>
+          <View key={user.id} style={Styles.user}>
+            <Text style={Styles.userText}>{user.name}</Text>
             <TouchableOpacity
-              style={styles.button}
+              style={Styles.button}
               onPress={() =>
                 navigation.navigate("Colaboradores", { data: user })
               }
             >
-              <Text style={styles.buttonText}>Ver</Text>
+              <Text style={Styles.buttonver}>Ver</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={styles.button}
+              style={Styles.button}
               onPress={() => handleDelete(user.id)}
             >
-              <Text style={styles.buttonText}>Excluir</Text>
+              <Text style={Styles.buttonexcluir}>Excluir</Text>
             </TouchableOpacity>
           </View>
         ))}
