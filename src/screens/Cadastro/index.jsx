@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TouchableOpacity, TextInput, Alert } from "react-native";
+import { View, Text, TouchableOpacity, TextInput, Alert, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Title from "../../components/Title";
 import styles from "./styles";
@@ -94,9 +94,11 @@ export default function Cadastro({ route }) {
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
-     <Header />
-      
+     
+      <Header title="Cadastro" />
+  
       <View style={styles.title}>
       
         <Text>Cadastro</Text>
@@ -160,7 +162,9 @@ export default function Cadastro({ route }) {
           </View>
         ))}
       </View>
-  
+
     </View>
+    </ScrollView>
+ 
   );
 }
