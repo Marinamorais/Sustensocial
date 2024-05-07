@@ -95,7 +95,10 @@ export default function Cadastro({ route }) {
 
   return (
     <View style={styles.container}>
+     <Header />
+      
       <View style={styles.title}>
+      
         <Text>Cadastro</Text>
       </View>
       <View style={styles.form}>
@@ -157,7 +160,7 @@ export default function Cadastro({ route }) {
           </View>
         ))}
       </View>
-      <Header />
+  
     </View>
   );
 }
