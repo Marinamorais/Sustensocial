@@ -136,7 +136,7 @@ export default function Cadastro({ route }) {
             <Text style={Styles.buttonText}>Editar</Text>
           </TouchableOpacity>
         ) : (
-          <TouchableOpacity style={Styles.button} onPress={handleAddUser}>
+          <TouchableOpacity style={Styles.buttoncadastro} onPress={handleAddUser}>
             <Text style={Styles.buttonText}>Cadastrar</Text>
           </TouchableOpacity>
         )}

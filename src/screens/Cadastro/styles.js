@@ -53,11 +53,21 @@ const Styles = StyleSheet.create({
   },
   button: {
     paddingVertical: 15,
-    backgroundColor: "#",
+    backgroundColor: "#00AA00", // Cor de fundo do botão
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 20,
+    width: "30%",
+  },
+  buttoncadastro: {
+    paddingVertical: 15,
+    backgroundColor: "#00AA00", // Cor de fundo do botão
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 20,
+    width: "100%",
   },
   buttonText: {
     color: "#FFFFFF",
