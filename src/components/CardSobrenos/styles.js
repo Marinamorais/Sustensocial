@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#FCFDF4",
+    backgroundColor: "#FFFFFF",
   },
   logo: {
     width: 200,
@@ -50,10 +50,11 @@ const styles = StyleSheet.create({
   },
   integranteName: {
     textAlign: "center",
+    fontWeight: "bold", // Mudança feita aqui de fontStyle para fontWeight
   },
   funcao: {
     textAlign: "center",
-    fontStyle: "bold",
+    fontWeight: "bold", // Mudança feita aqui de fontStyle para fontWeight
   },
 });
 

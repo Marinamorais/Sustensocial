@@ -7,16 +7,12 @@ import Category from "../../screens/Forum";
 const Card = ({ title, image }) => {
   const navigation = useNavigation(Category); // Isso é necessário para acessar a navegação
 
-  const onPressButton = () => {
-    navigation.navigate("Categoria"); // Isso é necessário para navegar para outra tela
-  };
-
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={onPressButton} style={styles.button}>
+      <View style={styles.button}>
         <Image source={image} style={styles.image} />
         <Text style={styles.title}>{title}</Text>
-      </TouchableOpacity>
+      </View>
     </View>
   );
 };

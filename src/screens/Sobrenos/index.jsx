@@ -12,12 +12,12 @@ export default function Sobrenos() {
         <Text style={styles.title}>Sobre Nós</Text>
         <CardSobrenos
           image={require("../../../assets/sobrenos.png.png")}
-          videoLink="https://www.youtube.com/watch?v=JGwWNGJdvx8"
+          videoLink="https://youtube.com/shorts/F3qa9ia5Djg?si=W29wV9dYdrMwGMUu"
           description="Somos uma plataforma de engajamento social, unindo pessoas e organizações para causar um impacto positivo. Valorizamos cada voz e acreditamos no poder das pequenas ações. Nossa comunidade acolhedora compartilha experiências, aprende junto e busca um mundo mais justo e sustentável. Aqui, você encontrará recursos e apoio para fazer a diferença. Junte-se a nós!"
           integrantes={[
             {
               name: "Matheus Scaranello",
-              funcao: "Gerente de Projeto",
+              funcao: "Gerente de Projeto e desenvolvedor lider",
               image: require("../../../assets/matheus.png"),
             },
             {
