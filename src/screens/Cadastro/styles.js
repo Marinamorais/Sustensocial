@@ -6,7 +6,6 @@ const Styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     justifyContent: "center",
     alignItems: "center",
-
   },
   card: {
     marginTop: 100,
@@ -25,8 +24,6 @@ const Styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
     marginBottom: 50,
-
-    
   },
   title: {
     fontSize: 24,
@@ -37,10 +34,9 @@ const Styles = StyleSheet.create({
   },
   form: {
     marginBottom: 20,
-    width: "100%"
+    width: "100%",
   },
   input: {
-    
     paddingVertical: 15,
     paddingHorizontal: 20,
     borderWidth: 1,
@@ -77,7 +73,7 @@ const Styles = StyleSheet.create({
     justifyContent: "center",
     marginBottom: 10,
     width: "20%", // Alterado para 45% da largura total
-    marginLeft: 170,
+    marginLeft: 100,
     backgroundColor: "#FF6347",
     borderWidth: 1,
     borderColor: "black",
@@ -120,7 +116,6 @@ const Styles = StyleSheet.create({
     fontSize: 16,
     color: "#333333",
   },
-
 });
 
 export default Styles;
