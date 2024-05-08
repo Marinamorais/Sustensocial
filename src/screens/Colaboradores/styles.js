@@ -6,24 +6,26 @@ const styles = StyleSheet.create({
     backgroundColor:"#FCFDF4",
     alignItems: "center",
     justifyContent: "flex-start", 
-    paddingTop: 20, 
+  
   },
   title: {
     fontSize: 24,
-    marginTop: 20,
-    marginBottom: 20,
+    marginTop: 120,
     fontWeight: "bold",
     fontWeight: "bold",
-    marginBottom: 20,
     color: "#333333",
   },
   card: {
-    backgroundColor: "#F5F5F5",
+    backgroundColor: "#rgb(207, 218, 177)",
     borderRadius: 10,
     padding: 50,
     marginBottom: 100,
     width: "80%",
+    borderWidth: 1,
+    borderColor: "black",
     alignItems: "center",
+    marginTop: 160,
+    marginBottom: 140,
   },
   name: {
     fontSize: 24,
@@ -59,11 +61,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   backButton: {
-    backgroundColor: "#CCCCCC",
+    backgroundColor: "#00AA00",
+    color: "#FFFFFF",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
     marginTop: 10,
+    marginBottom: 20,
   },
   backButtonText: {
     color: "#333333",
@@ -72,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default styles;
+export default styles
