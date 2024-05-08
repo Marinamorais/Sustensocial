@@ -87,7 +87,7 @@ export default function Home() {
                   >
                     <Cards
                       title={item.nome}
-                      image={require("../../../assets/img.png")}
+                      image={item.image} 
                       descri="Descrição do card..."
                       style={styles.cardOverlay}
                     />
