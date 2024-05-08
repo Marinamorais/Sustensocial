@@ -3,10 +3,9 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:"#FCFDF4",
+    backgroundColor: "#FCFDF4",
     alignItems: "center",
-    justifyContent: "flex-start", 
-  
+    justifyContent: "flex-start",
   },
   title: {
     fontSize: 24,
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "black",
     alignItems: "center",
-    marginTop: 160,
+    marginTop: 140,
     marginBottom: 140,
   },
   name: {
@@ -76,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default styles
+export default styles;
