@@ -18,8 +18,9 @@ export default function Colaboradores({ route }) {
 
   return (
     <View style={styles.container}>
+      <Header />
       <Title title="Colaboradores" />
-      <View style={styles.profile}>
+      <View style={styles.card}>
         <Text style={styles.name}>{data.name}</Text>
         <Text style={styles.email}>{data.email}</Text>
         <Text style={styles.telephone}>{data.telephone}</Text>
@@ -37,7 +38,6 @@ export default function Colaboradores({ route }) {
       >
         <Text style={styles.backButtonText}>Voltar</Text>
       </TouchableOpacity>
-      <Header />
     </View>
   );
 }
