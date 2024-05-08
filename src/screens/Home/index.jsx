@@ -68,8 +68,7 @@ export default function Home() {
               source={require("../../../assets/mundo.jpg")}
             />
             <Text style={styles.texto01}>
-              O SustenSocial é um aplicativo que tem como objetivo incentivar a
-              prática de ações sustentáveis. como a ONG, a e colaboradores.
+             O SustenSocial é um aplicativo que tem como objetivo incentivar a prática de ações sustentáveis. como a ONG, a e colaboradores. O app é uma plataforma de conexão entre ONGs, colaboradores e pessoas que desejam contribuir com a sustentabilidade do planeta.
             </Text>
             <View style={styles.content01}>
               <Image
