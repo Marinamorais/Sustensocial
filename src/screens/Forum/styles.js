@@ -16,13 +16,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   messageContainer: {
-<<<<<<< HEAD
     width: "90%",
-=======
-
-    width: "90%",
-
->>>>>>> b35b62cfbc8b8f5a74e22ff40e49a77ee9212425
     backgroundColor: "#FFF",
     padding: 20,
     marginBottom: 20,
