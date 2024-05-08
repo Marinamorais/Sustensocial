@@ -17,7 +17,7 @@ export default function Sobrenos() {
           integrantes={[
             {
               name: "Matheus Scaranello",
-              funcao: "Gerente de Projeto e desenvolvedor lider",
+              funcao: "Gerente de Projeto e Desenvolvedor Lider",
               image: require("../../../assets/matheus.png"),
             },
             {
