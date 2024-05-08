@@ -3,10 +3,10 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFFFFF",
+    backgroundColor:"#FCFDF4",
     alignItems: "center",
-    justifyContent: "flex-start", // Alteração aqui
-    paddingTop: 20, // Adicionando padding no topo para dar espaço
+    justifyContent: "flex-start", 
+    paddingTop: 20, 
   },
   title: {
     fontSize: 24,
