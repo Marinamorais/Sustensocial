@@ -73,10 +73,6 @@ export default function Home() {
               prática de ações sustentáveis. como a ONG, a e colaboradores. O
               app é uma plataforma de conexão entre ONGs, colaboradores e
               pessoas que desejam contribuir com a sustentabilidade do planeta.
-              O SustenSocial é um aplicativo que tem como objetivo incentivar a
-              prática de ações sustentáveis. como a ONG, a e colaboradores. O
-              app é uma plataforma de conexão entre ONGs, colaboradores e
-              pessoas que desejam contribuir com a sustentabilidade do planeta.
             </Text>
             <View style={styles.content01}>
               <Image
