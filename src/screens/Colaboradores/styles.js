@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "black",
     alignItems: "center",
-    marginTop: 140,
-    marginBottom: 140,
+    marginTop: 90,
+    marginBottom: 100,
   },
   name: {
     fontSize: 24,
